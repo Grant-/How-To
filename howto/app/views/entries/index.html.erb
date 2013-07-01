@@ -4,13 +4,20 @@
 
 <ul>
 	
-		<% @entries.each do |entry| %>
+	<% @entries.each do |entry| %>
 	<li>
- 
-		<%= entry.title %>
-	by  <%= entry.Author %>
-		<%= entry.Description %>
-		<%= entry.tags %>
+ 		<div class="entry.title">
+			<%= entry.title %>
+		</div>
+		<div class="entry.author">
+	by  	<%= entry.Author %>
+		</div>
+		<div class="entry.description">
+			<%= entry.Description %>
+		</div>
+		<div class="entry.tags">
+	Tags:	<%= entry.tags %>
+		</div>
 	</li>
 </ul>
 
