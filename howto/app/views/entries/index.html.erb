@@ -1,34 +1,25 @@
 <h1>All Entries</h1>
 
-<table>
 
 
-<% @entries.each do |entry| %>
-  <tr>
-    <td><strong>Title:</strong></td>
-    <td><%= entry.title %></td>
-  </tr>
-  <tr>
-    <td><strong>Author:</strong></td>
-    <td><%= entry.Author %></td>
-  </tr>
-  <tr>
-    <td><strong>Desc:</strong></td>
-    <td><%= entry.Description %></td>
-  </tr>
-  <tr>
-    <td><strong>Tags:</strong></td>
-    <td><%= entry.tags %></td>
-  </tr>
-  <tr>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<ul>
+	
+		<% @entries.each do |entry| %>
+	<li>
+ 
+		<%= entry.title %>
+	by  <%= entry.Author %>
+		<%= entry.Description %>
+		<%= entry.tags %>
+	</li>
+</ul>
+
+<%= link_to 'Show Full Entry', entry %> |
+<%= link_to 'Edit Entry', edit_entry_path(entry) %>
+
 <% end %>
-</table>
 
-<br />
+
 
 <%= link_to 'New Entry', new_entry_path %>
 
