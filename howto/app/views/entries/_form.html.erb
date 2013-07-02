@@ -1,4 +1,4 @@
-<div class="container">
+
 <%= form_for(@entry) do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
@@ -13,23 +13,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
+    <p style="font-style: italic;">The title of your entry</p>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :Author %><br />
+    <%= f.label :Author %>
+    <p style="font-style: italic;">Your name goes here.</p>
     <%= f.text_field :Author %>
   </div>
   <div class="field">
-    <%= f.label :Description %><br />
+    <%= f.label :Description %>
+    <p style="font-style: italic;">Be very descriptive.</p>
     <%= f.text_area :Description %>
   </div>
   <div class="field">
-    <%= f.label :tags %><br />
+    <%= f.label :tags %>
+    <p style="font-style: italic;">Hashtags aren't needed. This isn't twitter.</p>
     <%= f.text_field :tags %>
   </div>
   <div class="actions">
+    <p style="font-style: italic;">Submit that young entry.</p>
     <%= f.submit %>
   </div>
 <% end %>
-</div>
+
