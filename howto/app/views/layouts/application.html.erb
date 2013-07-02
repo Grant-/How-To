@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "How To" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "How (not) to" %></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -29,7 +29,7 @@
               <%= yield %>
             </div>
           </div>
-          <footer>
+          <footer style="border-top: 1px solid #000000;">
 		  Copyright No_one, inc.
           </footer>
         </div>

@@ -1,32 +1,41 @@
-<h1>All Entries</h1>
 
 
 
-<ul>
-	
-	<% @entries.each do |entry| %>
-	<li>
- 		<div class="entry.title">
-			<%= entry.title %>
-		</div>
-		<div class="entry.author">
-	by  	<%= entry.Author %>
-		</div>
-		<div class="entry.description">
-			<%= entry.Description %>
-		</div>
-		<div class="entry.tags">
-	Tags:	<%= entry.tags %>
-		</div>
-	</li>
-</ul>
+<div style="border-top:    1px solid #000000;
+			border-right:  1px solid #000000;
+			border-left:   1px solid #000000;
+			margin: 0 0 20px 0;
+			">
+		<ul style="list-style: none;">
+			
+			<% @entries.each do |entry| %>
+			<li>
+		 		<div class="entry-title">
+					<%= entry.title %>
+				</div>
+				<br />
+				<div class="entry-author">
+			  		by <%= entry.Author %>
+				</div>
+				<br />
+				<div class="entry-description">
+					<%= entry.Description %>
+				</div>
+				<br />
+				<div class="entry-tags">
+					Tags: <%= entry.tags %>
+				</div>
 
-<%= link_to 'Show Full Entry', entry %> |
-<%= link_to 'Edit Entry', edit_entry_path(entry) %>
+			</li>
+		</ul>
+	<div style="border-bottom: 1px solid #000000;">
+		<%= link_to 'Show Full Entry', entry %> |
+		<%= link_to 'Edit Entry', edit_entry_path(entry) %>
+	</div>
 
-<% end %>
+	<% end %>
+</div>
 
 
 
-<%= link_to 'New Entry', new_entry_path %>
 
